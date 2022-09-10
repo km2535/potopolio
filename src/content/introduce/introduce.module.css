@@ -1,0 +1,101 @@
+@import url(../../common/common.css);
+.content{
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.head{
+  font-family: var(--head-font);
+  font-size: 80px;
+  height: 50%;
+  transform:  translateY(100px);
+}
+.subTitle{
+  margin-top: -30px;
+}
+.title, .subTitle{
+  opacity: 0;
+}
+.subHead{
+  font-family: var(--content-font);
+  transform: translateX(120px) translateY(0px);
+  line-height: 50px;
+  font-size: 35px;
+  opacity: 0;
+}
+.imgContent{
+  width: 60%;
+  transform-style: preserve-3d;
+  perspective: 560px;
+}
+.frame{
+  position: absolute;
+  width: 750px;
+  margin-top: 30px;
+  transform: translate3d(0px, 0px, 0px) rotate3d(0.2, -0.5, 0.4, 24deg);
+  animation: frame 2s infinite alternate-reverse;
+}
+.js{
+  position: absolute;
+  width: 100px;
+  transform:  translate3d(450px, 470px, 200px) rotate3d(0.2, -0.4, 0.4, 24deg);
+}
+.node{
+  position: absolute;
+  width: 110px;
+  transform: translate3d(126px, 136px, 70px) rotate3d(0.2, -0.4, 0.4, 26deg);
+}
+.database{
+  position: absolute;
+  width: 80px;
+  transform: translate3d(600px, 350px, 155px) rotate3d(0.2, -0.4, 0.4, 28deg);
+}
+.java{
+  position: absolute;
+  width:100px;
+  transform: translate3d(400px, 280px, 250px) rotate3d(0.2, -0.4, 0.4, 24deg);
+}
+.react{
+  position: absolute;
+  width: 250px;
+  transform: translate3d(50px, 300px, 165px) rotate3d(0.2, -0.4, 0.4, 30deg);
+  animation: circle infinite alternate-reverse 10s;
+}
+
+.aws{
+  position: absolute;
+  width:95px;
+  transform: translate3d(660px, 250px, 110px) rotate3d(0.2, -0.4, 0.4, 28deg);
+  animation: aws 2s infinite alternate-reverse;
+}
+
+@keyframes frame {
+  0%{
+   transform: translate3d(0px, 0px, 0px) rotate3d(0.2, -0.5, 0.4, 24deg);
+  }
+  100%{
+   transform: translate3d(0px, 0px, 0px) rotate3d(0.2, -0.5, 0.4, 18deg);
+  }
+}
+@keyframes aws {
+  0%{
+   transform: translate3d(660px, 250px, 110px) rotate3d(0.2, -0.4, 0.4, 28deg);
+  }
+  100%{
+  transform: translate3d(660px, 250px, 110px) rotate3d(0.2, -0.4, 0.4, 20deg);
+  }
+}
+
+@keyframes circle {
+  0%{
+    transform: translate3d(50px, 300px, 165px) rotate3d(0.2, -0.4, 0.4, 30deg) rotateZ(0deg);
+  }
+  100%{
+    transform: translate3d(50px, 300px, 165px) rotate3d(0.2, -0.4, 0.4, 30deg) rotateZ(180deg);
+  }
+}
