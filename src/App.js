@@ -4,6 +4,7 @@ import Introduce from "./content/introduce/introduce";
 import Scroll from "./content/scroll/scroll";
 import Header from "./header/header";
 import { gsap } from "gsap";
+import Alum from "./content/alum/alum";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Introduce gsap={gsap} />
       <Scroll />
+      <Alum />
       <Circle gsap={gsap} />
     </>
   );

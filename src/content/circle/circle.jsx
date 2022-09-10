@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./circle.module.css";
 
 function Circle({ gsap }) {
-  console.log(gsap);
+  //console.log(gsap);
   const body = document.body;
   const items = document.getElementsByClassName(style.item);
   const bg = document.getElementsByClassName(style.bg);
@@ -35,13 +35,13 @@ function Circle({ gsap }) {
     init(bg);
 
     function init(bg) {
-      const x = 1500;
+      const x = 1800;
       const y = 300;
       bg[0].style.transform = `translate3d(${x}px, ${-y}px, 0) translatex(-42%) translatey(58%)`;
     }
 
     function circle(radian, radius, item) {
-      const x = Math.sin(radian) * radius + 1500;
+      const x = Math.sin(radian) * radius + 1800;
       const y = Math.cos(radian) * radius + 300;
       item.style.transform = `translate3d(${x}px, ${-y}px, 0)`;
     }

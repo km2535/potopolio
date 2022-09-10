@@ -3,6 +3,7 @@
   width: 100vw;
   height: 85vh;
   display: flex;
+  padding-top: 50px;
 }
 .text{
   display: flex;

@@ -1,8 +1,7 @@
 import React from "react";
+import style from "./alum.module.css";
 
 const Alum = (props) => {
-  console.log("dds");
-
   <>
     <div></div>
   </>;
