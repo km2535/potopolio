@@ -2,6 +2,8 @@
 .container{
   position: fixed;
   width: 100vw;
+  background-color: #fff;
+  z-index: 5;
 }
 .header{
   text-align: center;

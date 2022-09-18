@@ -1,7 +1,7 @@
 @import url(../../common/common.css);
 .content{
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   display: flex;
   padding-top: 50px;
 }

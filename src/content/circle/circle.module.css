@@ -2,8 +2,8 @@
   position: fixed;
 }
 .bg{
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   background-color: #000;
   border-radius: 50%;
   z-index: 1;
@@ -11,8 +11,8 @@
 .bg::after{
   content: "";
   display: block;
-  width: 338px;
-  height: 338px;
+  width: 438px;
+  height: 438px;
   background-color: #fff;
   border-radius: 50%;
   position: relative;

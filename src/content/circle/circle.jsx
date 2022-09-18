@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import style from "./circle.module.css";
 
 function Circle({ gsap }) {
-  //console.log(gsap);
-  const body = document.body;
   const items = document.getElementsByClassName(style.item);
   const bg = document.getElementsByClassName(style.bg);
-  const radius = 170;
+  const radius = 225;
   let [deg, setDeg] = useState(0);
+
   // props로 true를 전달받은 객체가 있으면 intaval를 실행한다.
   const onClickHandler = () => {
     intaval();
@@ -28,25 +27,23 @@ function Circle({ gsap }) {
         (360 / items.length) * i > 360
           ? 360 - (360 / items.length) * i
           : (360 / items.length) * i;
-      //console.log(degree);
       let radian = (Math.PI / 180) * (degree + deg);
       circle(radian, radius, items[i]);
     }
     init(bg);
-
     function init(bg) {
-      const x = 1800;
-      const y = 300;
-      bg[0].style.transform = `translate3d(${x}px, ${-y}px, 0) translatex(-42%) translatey(58%)`;
+      const x = window.innerWidth * 0.96;
+      const y = window.innerHeight * 0.5;
+      bg[0].style.transform = `translate3d(${x}px, ${-y}px, 0) translatex(-44%) translatey(56%)`;
     }
 
     function circle(radian, radius, item) {
-      const x = Math.sin(radian) * radius + 1800;
-      const y = Math.cos(radian) * radius + 300;
+      const x = Math.sin(radian) * radius + window.innerWidth * 0.96;
+      const y = Math.cos(radian) * radius + window.innerHeight * 0.5;
       item.style.transform = `translate3d(${x}px, ${-y}px, 0)`;
     }
   }, [deg]);
-  //console.log(body.clientWidth + radius);
+
   return (
     <>
       <div className={style.container}>

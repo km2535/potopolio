@@ -1,18 +1,16 @@
 import "./App.css";
 import Circle from "./content/circle/circle";
-import Introduce from "./content/introduce/introduce";
 import Scroll from "./content/scroll/scroll";
 import Header from "./header/header";
 import { gsap } from "gsap";
-import Alum from "./content/alum/alum";
+import Section from "./sections/section";
 
 function App() {
   return (
     <>
       <Header />
-      <Introduce gsap={gsap} />
       <Scroll />
-      <Alum />
+      <Section gsap={gsap} />
       <Circle gsap={gsap} />
     </>
   );
