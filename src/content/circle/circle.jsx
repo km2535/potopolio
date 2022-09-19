@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import style from "./circle.module.css";
 
-function Circle({ gsap }) {
+function Circle({ pageHandler }) {
+  console.log(pageHandler);
   const items = document.getElementsByClassName(style.item);
   const bg = document.getElementsByClassName(style.bg);
   const radius = 225;
   let [deg, setDeg] = useState(0);
 
   // props로 true를 전달받은 객체가 있으면 intaval를 실행한다.
-  const onClickHandler = () => {
-    intaval();
-  };
+  const onClickHandler = () => {};
 
   const intaval = () => {
     const iternal = setInterval(() => {
@@ -21,6 +20,9 @@ function Circle({ gsap }) {
       }
     }, 0.5);
   };
+  if (pageHandler) {
+    //intaval();
+  }
   useEffect(() => {
     for (let i = 0; i < items.length; i++) {
       let degree =
@@ -33,13 +35,13 @@ function Circle({ gsap }) {
     init(bg);
     function init(bg) {
       const x = window.innerWidth * 0.96;
-      const y = window.innerHeight * 0.5;
+      const y = window.innerHeight * -0.5;
       bg[0].style.transform = `translate3d(${x}px, ${-y}px, 0) translatex(-44%) translatey(56%)`;
     }
 
     function circle(radian, radius, item) {
       const x = Math.sin(radian) * radius + window.innerWidth * 0.96;
-      const y = Math.cos(radian) * radius + window.innerHeight * 0.5;
+      const y = Math.cos(radian) * radius + window.innerHeight * -0.5;
       item.style.transform = `translate3d(${x}px, ${-y}px, 0)`;
     }
   }, [deg]);
@@ -47,7 +49,7 @@ function Circle({ gsap }) {
   return (
     <>
       <div className={style.container}>
-        <div className={style.bg} onClick={onClickHandler}></div>
+        <div className={style.bg}></div>
         <div className={style.item}></div>
         <div className={style.item}></div>
         <div className={style.item}></div>

@@ -1,0 +1,25 @@
+@import url(../../../common/common.css);
+
+.container{
+  width: 100vw;
+  height: 120vh;
+}
+.chatImg{
+  width: 50vw;
+  height: 100vh;
+}
+.img{
+  position:absolute;
+  width: 1000px;
+  height: 700px;
+  box-shadow: 1px 1px 10px rgb(136, 135, 135);
+}
+
+.chatTitle{
+  position: absolute;
+  font-family: var(--content-font);
+  font-size: 100px;
+}
+.chat1, .chat2{
+  font-size: 24px;
+}
