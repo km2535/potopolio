@@ -34,7 +34,19 @@ function Alum() {
       y: 50,
       x: "500%",
     });
-
+    gsap.set("#chat1", {
+      x: "320%",
+      y: -350,
+      opacity: 0,
+    });
+    gsap.set("#chat2", {
+      x: "200%",
+      y: -300,
+      opacity: 0,
+    });
+    gsap.set("#chatImg", {
+      x: "48%",
+    });
     gsap
       .timeline()
       .to("#model1", {
@@ -46,10 +58,9 @@ function Alum() {
         scrollTrigger: {
           trigger: "#imgContent",
           toggleActions: "restart pause reverse pause",
-          pin: true,
           scrub: true,
           start: "top 15%",
-          end: "100% 15%",
+          end: "bottom 15%",
         },
       })
       .to("#model2", {
@@ -62,9 +73,8 @@ function Alum() {
           trigger: "#imgContent",
           toggleActions: "restart pause reverse pause",
           scrub: true,
-          pin: true,
           start: "top 15%",
-          end: "100% 15%",
+          end: "bottom 15%",
         },
       })
       .to("#img", {
@@ -78,7 +88,7 @@ function Alum() {
           pin: true,
           scrub: true,
           start: "top 15%",
-          end: "100% 15%",
+          end: "bottom 15%",
         },
       });
 
@@ -101,6 +111,36 @@ function Alum() {
         start: "top 15%",
       },
     });
+    gsap.to("#chatImg", {
+      scrollTrigger: {
+        trigger: "#chatContainer",
+        toggleActions: "play pause play pause",
+        pin: true,
+        markers: true,
+      },
+    });
+    gsap
+      .timeline()
+      .to("#chat1", {
+        y: -400,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#chatContainer",
+          toggleActions: "play pause play pause",
+          pin: true,
+          scrub: true,
+        },
+      })
+      .to("#chat2", {
+        y: -350,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#chatContainer",
+          toggleActions: "play pause play pause",
+          pin: true,
+          scrub: true,
+        },
+      });
   }, []);
   return (
     <>

@@ -1,15 +1,19 @@
 @import url(../../../common/common.css);
 
 .container{
-  width: 100vw;
-  height: 120vh;
+  width: 1000px;
+ height: 700px;
+}
+.chatContent{
+  width: 1000px;
+  height: 700px;
+  
 }
 .chatImg{
-  width: 50vw;
-  height: 100vh;
+  width: 1000px;
+  height: 700px;
 }
 .img{
-  position:absolute;
   width: 1000px;
   height: 700px;
   box-shadow: 1px 1px 10px rgb(136, 135, 135);
