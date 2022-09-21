@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import style from "./alum.module.css";
 import { gsap } from "gsap";
 import Chat from "./chat/chat";
+import Goalum from "./goAlum/goalum";
+import { Elastic } from "gsap/all";
 
 function Alum() {
   useEffect(() => {
@@ -19,7 +21,7 @@ function Alum() {
       zIndex: 1,
     });
     gsap.set("#model2", {
-      y: 200,
+      y: 180,
       x: 320,
       z: 30,
       zIndex: 1,
@@ -36,16 +38,42 @@ function Alum() {
     });
     gsap.set("#chat1", {
       x: "320%",
-      y: -350,
+      y: -250,
       opacity: 0,
     });
     gsap.set("#chat2", {
       x: "200%",
-      y: -300,
+      y: -200,
       opacity: 0,
     });
     gsap.set("#chatImg", {
+      y: 100,
       x: "48%",
+    });
+    gsap.set("#goImgContent", {
+      y: 500,
+      x: "80%",
+      perspective: 1000,
+      force3D: true,
+      transformStyle: "preserve-3d",
+      zIndex: -1,
+    });
+    gsap.set("#goTxt1", {
+      x: "-500%",
+      y: 50,
+    });
+    gsap.set("#goTxt2", {
+      x: "-500%",
+      y: 100,
+    });
+    gsap.set("#goTxt3", {
+      x: "-500%",
+      y: 150,
+    });
+    gsap.set(".Typewriter", {
+      x: "50%",
+      y: 330,
+      z: 100,
     });
     gsap
       .timeline()
@@ -99,16 +127,18 @@ function Alum() {
         trigger: "#imgContent",
         toggleActions: "play reverse play reverse",
         start: "top 15%",
+        end: "+=" + window.innerHeight * 1.5,
       },
     });
     gsap.to("#txt2", {
       opacity: 1,
       x: "310%",
-      delay: 0.5,
+      delay: 0.3,
       scrollTrigger: {
         trigger: "#imgContent",
         toggleActions: "play reverse play reverse",
         start: "top 15%",
+        end: "+=" + window.innerHeight * 1.5,
       },
     });
     gsap.to("#chatImg", {
@@ -116,13 +146,12 @@ function Alum() {
         trigger: "#chatContainer",
         toggleActions: "play pause play pause",
         pin: true,
-        markers: true,
       },
     });
     gsap
       .timeline()
       .to("#chat1", {
-        y: -400,
+        y: -300,
         opacity: 1,
         scrollTrigger: {
           trigger: "#chatContainer",
@@ -132,7 +161,7 @@ function Alum() {
         },
       })
       .to("#chat2", {
-        y: -350,
+        y: -250,
         opacity: 1,
         scrollTrigger: {
           trigger: "#chatContainer",
@@ -141,6 +170,73 @@ function Alum() {
           scrub: true,
         },
       });
+    gsap.to("#goImg", {
+      x: -100,
+      rotationX: 10,
+      rotationY: -30,
+      rotationZ: 0,
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play pause play pause",
+        pin: true,
+        scrub: true,
+        start: "top 15%",
+        end: "bottom 15%",
+      },
+    });
+    gsap.to("#goTxt1", {
+      x: -300,
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play reverse play reverse",
+        start: "top 15%",
+      },
+    });
+    gsap.to("#goTxt2", {
+      x: -389,
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play reverse play reverse",
+        start: "top 15%",
+      },
+    });
+
+    gsap.to("#goTxt3", {
+      x: -350,
+      delay: 0.5,
+      ease: Elastic.easeOut.config(0.5, 0.4, 0.2),
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play reverse play reverse",
+        start: "top 15%",
+      },
+    });
+    gsap.to("#goTxt3", {
+      delay: 1.0,
+      scale: 1.5,
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play reverse play reverse",
+        start: "top 15%",
+      },
+    });
+    gsap.to(".Typewriter", {
+      x: "25%",
+      y: 360,
+      z: 400,
+      rotationX: 15,
+      rotationY: -42,
+      rotationZ: 2,
+      scrollTrigger: {
+        trigger: "#goImgContent",
+        toggleActions: "play pause play pause",
+        pin: true,
+        scrub: true,
+        start: "top 15%",
+        end: "bottom 15%",
+      },
+    });
   }, []);
   return (
     <>
@@ -175,6 +271,7 @@ function Alum() {
           </div>
         </div>
         <Chat />
+        <Goalum />
       </div>
     </>
   );

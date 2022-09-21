@@ -8,9 +8,9 @@ function Introduce({ gsap }) {
   useEffect(() => {
     gsap
       .timeline()
-      .to(titleRef.current, { opacity: 1, x: 150, duration: 1 })
-      .to(subTitleRef.current, { opacity: 1, x: 150, duration: 1 })
-      .to(subHead.current, { opacity: 1, x: 150, duration: 1.5 });
+      .to(titleRef.current, { opacity: 1, x: 150, duration: 0.3 })
+      .to(subTitleRef.current, { opacity: 1, x: 150, duration: 0.5 })
+      .to(subHead.current, { opacity: 1, x: 150, duration: 0.8 });
   });
   return (
     <div className={style.content}>
