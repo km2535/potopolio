@@ -34,7 +34,7 @@ function Goalum(props) {
                 id="goBtn"
                 className={style.btn}
                 onClick={() =>
-                  window.open("https://jaimemin.tistory.com/1449", "_blank")
+                  window.open("http://15.164.170.17:8080", "_blank")
                 }
               >
                 click me
