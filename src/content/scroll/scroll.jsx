@@ -5,7 +5,7 @@ import style from "./scroll.module.css";
 const Scroll = (props) => (
   <>
     <div className={style.scrollContent}>
-      <span className={style.txt}>scroll me</span>
+      <span className={style.txt}>scroll down </span>
       <i className={"fa-solid fa-computer-mouse" + " " + style.icon}></i>
     </div>
   </>

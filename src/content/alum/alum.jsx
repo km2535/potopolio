@@ -71,7 +71,7 @@ function Alum() {
       y: 150,
     });
     gsap.set(".Typewriter", {
-      x: "40%",
+      x: 350,
       y: 335,
       z: 100,
     });
@@ -222,7 +222,7 @@ function Alum() {
       },
     });
     gsap.to(".Typewriter", {
-      x: "20%",
+      x: 200,
       y: 355,
       z: 400,
       rotationX: 10,

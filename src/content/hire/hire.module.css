@@ -1,0 +1,17 @@
+.container{
+  width: 100vw;
+  height: 90vh;
+  margin-top: 500px;
+  scroll-behavior: smooth;
+}
+.lastpage{
+  width: 100vw;
+  height: 50vh;
+  background-color: #F6EBF6;
+}
+.slide, .img{
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+ 
+}

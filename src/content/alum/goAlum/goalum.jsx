@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./goalum.module.css";
 import Typewriter from "typewriter-effect";
-
+import Hire from "../../hire/hire";
+import { gsap } from "gsap";
 function Goalum(props) {
   return (
     <>
@@ -42,6 +43,7 @@ function Goalum(props) {
             </div>
           </div>
         </div>
+        <Hire gsap={gsap} />
       </div>
     </>
   );
