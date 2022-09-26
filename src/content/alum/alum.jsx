@@ -6,7 +6,7 @@ import Chat from "./chat/chat";
 import Goalum from "./goAlum/goalum";
 import { Elastic } from "gsap/all";
 
-function Alum() {
+function Alum({ scrollInfo, setScrollInfo }) {
   useEffect(() => {
     gsap.set("#imgContent", {
       perspective: 500,
@@ -271,7 +271,7 @@ function Alum() {
           </div>
         </div>
         <Chat />
-        <Goalum />
+        <Goalum scrollInfo={scrollInfo} setScrollInfo={setScrollInfo} />
       </div>
     </>
   );

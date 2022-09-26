@@ -1,0 +1,64 @@
+@import url(../../../common/common.css);
+.container{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #00000080;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #00000080;
+}
+.sns{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.github, .blog{
+  margin-top: 50px;
+  width: 35%;
+  text-align: center;
+  font-size: 50px;
+  background-color: #e5eaee7a;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.github:hover, .blog:hover,.email:hover{
+  background-color: #e5eaee;
+}
+.btnDiv{
+  text-align: right;
+}
+.btn{
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.email{
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  margin: 100px auto 0;
+  font-size: 30px;
+  font-family: var(--alata-font);
+  background-color: #e5eaee7a;
+  border-radius: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.email > div:nth-child(2){
+  font-size: 18px;
+  color: #0066ff80;
+  font-family: var(--content-font);
+  font-weight: 900;
+  margin-top: 20px;
+}

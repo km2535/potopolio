@@ -10,8 +10,34 @@
   background-color: #F6EBF6;
 }
 .slide, .img{
-  margin-top: 50px;
-  width: 500px;
-  height: 300px;
- 
+  margin-top: 20px;
+  width: 600px;
+  height: 400px;
+}
+.title{
+  position: absolute;
+  font-family: var(--head-font);
+  font-size: 100px;
+}
+.btn{
+  border: none;
+  border-radius: 20px;
+  background-color: #F34560;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  font-size: 40px;
+  font-variant: small-caps;
+  cursor: pointer;
+  animation: scaleBounce 1.5s alternate-reverse infinite;
+}
+
+
+@keyframes scaleBounce {
+  0%{
+    scale: 1.0;
+  }
+  100%{
+    scale: 1.3;
+  }
 }

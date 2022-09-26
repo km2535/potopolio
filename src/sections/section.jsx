@@ -3,7 +3,7 @@ import Alum from "../content/alum/alum";
 import Introduce from "../content/introduce/introduce";
 import style from "./section.module.css";
 
-function Section({ gsap }) {
+function Section({ gsap, scrollInfo, setScrollInfo }) {
   return (
     <>
       <div id="fullpage" className={style.fullpage}>
@@ -11,7 +11,7 @@ function Section({ gsap }) {
           <Introduce gsap={gsap} />
         </div>
         <div className="section alum">
-          <Alum gsap={gsap} />
+          <Alum scrollInfo={scrollInfo} setScrollInfo={setScrollInfo} />
         </div>
       </div>
     </>
