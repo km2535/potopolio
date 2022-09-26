@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/potopolio/static/css/main.34d969d1.css",
+    "main.js": "/potopolio/static/js/main.9b2d2b3d.js",
+    "index.html": "/potopolio/index.html",
+    "main.34d969d1.css.map": "/potopolio/static/css/main.34d969d1.css.map",
+    "main.9b2d2b3d.js.map": "/potopolio/static/js/main.9b2d2b3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34d969d1.css",
+    "static/js/main.9b2d2b3d.js"
+  ]
+}
