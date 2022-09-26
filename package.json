@@ -31,7 +31,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "eject": "react-app-rewired eject",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "deploy" : "gh-pages -d build",
+    "predeploy" : "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,5 +56,6 @@
   "devDependencies": {
     "@types/jquery": "^3.5.14",
     "react-app-rewired": "^2.2.1"
-  }
+  },
+  "homepage": "https://km2535.github.io/portpolio"
 }
